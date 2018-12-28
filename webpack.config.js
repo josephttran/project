@@ -13,8 +13,20 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: "ts-loader" },
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+      { 
+        test: /\.tsx?$/, 
+        loader: "ts-loader" 
+      },
+      { 
+        test : /\.jpg$/,
+        exclude: /node_modules/,
+        loader : 'file-loader'
+      },
+      { 
+        enforce: "pre", 
+        test: /\.js$/, 
+        loader: "source-map-loader"
+      }
     ]
   },
   plugins: [
