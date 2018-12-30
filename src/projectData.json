@@ -1,10 +1,26 @@
 [
   {
-  "name": "memory",
-  "image": "memory.jpg"
+    "name": "Memory",
+    "image": "memory.jpg",
+    "url": "https://josephttran.github.io/memory/",
+    "github": "https://github.com/josephttran/memory"
   },
   {
-  "name": "calculator",
-  "image": "calculator.jpg"
+    "name": "Calculator",
+    "image": "calculator.jpg",
+    "url": "https://josephttran.github.io/react-calculator",
+    "github": "https://github.com/josephttran/react-calculator"
+  },
+  {
+    "name": "Draw Lines",
+    "image": "draw-raster-line.jpg",
+    "url": "https://josephttran.github.io/draw-raster-line",
+    "github": "https://github.com/josephttran/draw-raster-line"
+  },
+  {
+    "name": "Dodge Blocks",
+    "image": "dodge-blocks.jpg",
+    "url": "https://josephttran.github.io/dodge-blocks",
+    "github": "https://github.com/josephttran/dodge-blocks"
   }
 ]

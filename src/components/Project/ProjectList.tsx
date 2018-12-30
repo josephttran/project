@@ -28,6 +28,8 @@ class ProjectList extends React.Component<{}, IProjectListState> {
             key={ele.name} 
             name={ele.name} 
             image={ele.image}
+            url={ele.url}
+            github={ele.github}
         />
       )
     });
