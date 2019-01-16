@@ -4,28 +4,36 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    filename: "bundle.min.js",
-    path: path.join(__dirname, "dist")
+    filename: 'bundle.min.js',
+    path: path.join(__dirname, 'dist')
   },
-  devtool: "source-map",
+  devtool: 'source-map',
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+    extensions: ['.ts', '.tsx', '.js']
   },
   module: {
     rules: [
       { 
         test: /\.tsx?$/, 
-        loader: "ts-loader" 
+        loader: 'ts-loader' 
       },
       { 
         test : /\.jpg$/,
         exclude: /node_modules/,
-        loader : 'file-loader'
+        loader: 'file-loader'
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: 'file-loader'
       },
       { 
-        enforce: "pre", 
+        enforce: 'pre', 
         test: /\.js$/, 
-        loader: "source-map-loader"
+        loader: 'source-map-loader'
       }
     ]
   },
