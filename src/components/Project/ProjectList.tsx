@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { IProject, SingleProject } from './SingleProject';
+import SingleProject, { IProject } from './SingleProject';
 import projectData from '../../projectData.json';
 
 interface IProjectListState {
@@ -21,7 +21,6 @@ class ProjectList extends React.Component<{}, IProjectListState> {
   }
 
   render() {
-    console.log(this.state.projects);    
     const proj = this.state.projects.map(ele => { 
       return (
         <SingleProject 
