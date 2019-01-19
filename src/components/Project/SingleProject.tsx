@@ -7,20 +7,22 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+import { Grid } from '@material-ui/core';
 
 const primary = blue[200];
 const secondary = blue[500];
 
 const styles = (theme: Theme) => createStyles({
-  card: {
-    margin: 'auto',
-    marginTop: 20,
-    backgroundColor: primary,
+  item: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    paddingTop: 10,
+    paddingRight: 20,
+    minWidth: 320
   },
-  '@media screen and (min-width: 768px)': {
-    card: {
-      maxWidth: 768
-    }
+  card: {
+    backgroundColor: primary,
+    border: '2px solid #ccc'
   },
   media: {
     height: 0, 
@@ -33,7 +35,6 @@ const styles = (theme: Theme) => createStyles({
     display: 'flex'
   },
   button: {
-    margin: theme.spacing.unit,
     width: 140,
     backgroundColor: secondary,
     color: theme.palette.getContrastText(secondary)
@@ -51,10 +52,10 @@ const SingleProject = (props: IProject) => {
   const { classes } = props;
 
   return (
-    <div>
+    <Grid item className={classes.item}>
       <Card className={classes.card}>
         <CardActionArea>
-          <a href={props.url}>
+          <a href={props.url} target='_blank'>
             <CardMedia
               className={classes.media}
               image={require(`../../asset/images/${props.image}`)}
@@ -74,7 +75,7 @@ const SingleProject = (props: IProject) => {
           </Button>
         </CardAction>
       </Card>
-    </div>
+    </Grid>
   )
 };
 
