@@ -8,7 +8,7 @@ import projectData from '../../projectData.json';
 const styles = (theme: Theme) => createStyles({
   container: {
     padding: 20,
-    backgroundColor: '#222',
+    backgroundColor: theme.palette.secondary.main,
   }
 });
 

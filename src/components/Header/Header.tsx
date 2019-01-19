@@ -9,8 +9,8 @@ export interface IHeader {
 export const Header = (props: IHeader) => {
   return (
     <div className='header'>
-      <AppBar position='static'>
-        <Typography variant='h2' align='center'>
+      <AppBar position='static' color='primary'>
+        <Typography variant='h2' align='center' color='inherit'>
           {props.name}
         </Typography>
       </AppBar>

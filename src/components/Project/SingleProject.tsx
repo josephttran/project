@@ -1,16 +1,15 @@
 import * as React from 'react';
-import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardAction from '@material-ui/core/CardActions';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import { Grid } from '@material-ui/core';
+import blue from '@material-ui/core/colors/blue';
+import Grid from '@material-ui/core/Grid';
+import { createStyles, Theme, withStyles, WithStyles } from '@material-ui/core/styles';
 
-const primary = blue[200];
-const secondary = blue[500];
+const buttonBg = blue[500];
 
 const styles = (theme: Theme) => createStyles({
   item: {
@@ -21,7 +20,7 @@ const styles = (theme: Theme) => createStyles({
     minWidth: 320
   },
   card: {
-    backgroundColor: primary,
+    backgroundColor: theme.palette.primary.main,
     border: '2px solid #ccc'
   },
   media: {
@@ -29,15 +28,15 @@ const styles = (theme: Theme) => createStyles({
     paddingTop: '75%'
   },
   title: {
-    color: 'theme.palette.getContrastText(primary)'
+    color: theme.palette.getContrastText(theme.palette.primary.main)
   },  
   actions: {
     display: 'flex'
   },
   button: {
     width: 140,
-    backgroundColor: secondary,
-    color: theme.palette.getContrastText(secondary)
+    backgroundColor: buttonBg,
+    color: theme.palette.getContrastText(buttonBg)
   }
 });
 
