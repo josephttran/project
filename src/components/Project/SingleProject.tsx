@@ -13,11 +13,20 @@ const buttonBg = blue[500];
 
 const styles = (theme: Theme) => createStyles({
   item: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    paddingTop: 10,
+    paddingTop: 20,
     paddingRight: 20,
-    minWidth: 320
+    width: '100%',
+    height: 'auto',
+    minWidth: 270,
+    [theme.breakpoints.up('sm')]: {
+      maxWidth: '50%',
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+      maxWidth: '33%'
+    },
+    [theme.breakpoints.up('lg')]: {
+      maxWidth: '25%'
+    }
   },
   card: {
     backgroundColor: theme.palette.primary.main,
@@ -34,7 +43,8 @@ const styles = (theme: Theme) => createStyles({
     display: 'flex'
   },
   button: {
-    width: 140,
+    width: '40%',
+    margin: theme.spacing.unit * 2,
     backgroundColor: buttonBg,
     color: theme.palette.getContrastText(buttonBg)
   }
